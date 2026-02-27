@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Licenses · Hindu Panchangam</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --saffron: #FF6B00;
+            --gold: #C9922A;
+            --gold-light: #F0C96B;
+            --dark: #1A0A00;
+            --dark-mid: #2D1600;
+            --text-light: #F5E6C8;
+            --text-muted: #A0855A;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: var(--dark);
+            color: var(--text-light);
+            font-family: 'EB Garamond', serif;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.4;
+        }
+
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            padding: 20px 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(26,10,0,0.97);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(201,146,42,0.15);
+        }
+
+        .nav-brand {
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            color: var(--gold);
+            text-decoration: none;
+            letter-spacing: 0.2em;
+        }
+
+        .nav-links { list-style: none; display: flex; gap: 32px; align-items: center; }
+        .nav-links a {
+            font-family: 'Cinzel', serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover, .nav-links a.active { color: var(--gold); }
+
+        .nav-divider { width: 1px; height: 16px; background: rgba(201,146,42,0.25); display: inline-block; vertical-align: middle; }
+        .nav-links .nav-legal a { color: rgba(160,133,90,0.5); font-size: 0.6rem; }
+        .nav-links .nav-legal a:hover, .nav-links .nav-legal a.active { color: var(--gold); }
+
+        .page-header {
+            padding: 160px 20px 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 700px; height: 400px;
+            background: radial-gradient(ellipse at center, rgba(201,146,42,0.10) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .page-eyebrow {
+            font-family: 'Cinzel', serif;
+            font-size: 0.65rem;
+            letter-spacing: 0.5em;
+            color: var(--saffron);
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 16px;
+        }
+
+        .page-title {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--gold-light), var(--gold), var(--saffron));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 16px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .page-meta {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .ornament {
+            display: flex; align-items: center; gap: 16px;
+            justify-content: center; margin: 30px auto;
+        }
+        .ornament-line { height: 1px; width: 80px; background: linear-gradient(to right, transparent, var(--gold)); }
+        .ornament-line.reverse { background: linear-gradient(to left, transparent, var(--gold)); }
+        .ornament-diamond { width: 7px; height: 7px; background: var(--gold); transform: rotate(45deg); }
+        .ornament-dot { width: 3px; height: 3px; background: var(--saffron); border-radius: 50%; }
+
+        .content-wrapper {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 20px 120px;
+        }
+
+        .intro-text {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: var(--text-muted);
+            text-align: center;
+            max-width: 660px;
+            margin: 0 auto 60px;
+        }
+
+        /* License Group */
+        .license-group {
+            margin-bottom: 60px;
+        }
+
+        .license-group-title {
+            font-family: 'Cinzel', serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.45em;
+            color: var(--saffron);
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .license-group-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(to right, rgba(201,146,42,0.3), transparent);
+        }
+
+        /* License Table */
+        .license-table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid rgba(201,146,42,0.15);
+        }
+
+        .license-table thead tr {
+            background: rgba(45,22,0,0.8);
+            border-bottom: 1px solid rgba(201,146,42,0.2);
+        }
+
+        .license-table thead th {
+            font-family: 'Cinzel', serif;
+            font-size: 0.6rem;
+            letter-spacing: 0.3em;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            padding: 14px 20px;
+            text-align: left;
+        }
+
+        .license-table tbody tr {
+            border-bottom: 1px solid rgba(201,146,42,0.06);
+            transition: background 0.2s;
+        }
+
+        .license-table tbody tr:last-child { border-bottom: none; }
+        .license-table tbody tr:hover { background: rgba(45,22,0,0.4); }
+
+        .license-table td {
+            padding: 14px 20px;
+            font-size: 1rem;
+            color: var(--text-muted);
+            vertical-align: middle;
+        }
+
+        .lib-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.05rem;
+            color: var(--text-light);
+            font-weight: 600;
+        }
+
+        .badge {
+            display: inline-block;
+            font-family: 'Cinzel', serif;
+            font-size: 0.55rem;
+            letter-spacing: 0.15em;
+            padding: 3px 10px;
+            border-radius: 2px;
+        }
+
+        .badge-mit {
+            background: rgba(201,146,42,0.12);
+            border: 1px solid rgba(201,146,42,0.3);
+            color: var(--gold);
+        }
+
+        .badge-apache {
+            background: rgba(255,107,0,0.10);
+            border: 1px solid rgba(255,107,0,0.3);
+            color: var(--saffron);
+        }
+
+        .badge-bsd {
+            background: rgba(240,201,107,0.08);
+            border: 1px solid rgba(240,201,107,0.25);
+            color: var(--gold-light);
+        }
+
+        .license-link {
+            font-family: 'Cinzel', serif;
+            font-size: 0.55rem;
+            letter-spacing: 0.15em;
+            color: rgba(160,133,90,0.5);
+            text-decoration: none;
+            text-transform: uppercase;
+            border-bottom: 1px solid rgba(160,133,90,0.2);
+            transition: color 0.3s, border-color 0.3s;
+        }
+        .license-link:hover { color: var(--gold); border-color: var(--gold); }
+
+        .footnote {
+            font-size: 0.9rem;
+            font-style: italic;
+            color: rgba(160,133,90,0.5);
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(201,146,42,0.1);
+        }
+
+        footer {
+            border-top: 1px solid rgba(201,146,42,0.15);
+            padding: 40px 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-brand { font-family: 'Cinzel', serif; font-size: 1rem; color: var(--gold); letter-spacing: 0.2em; }
+        .footer-legal { display: flex; gap: 24px; align-items: center; }
+        .footer-legal a {
+            font-family: 'Cinzel', serif;
+            font-size: 0.6rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: rgba(160,133,90,0.5);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .footer-legal a:hover, .footer-legal a.active { color: var(--gold); }
+        .footer-legal-divider { width: 1px; height: 12px; background: rgba(201,146,42,0.2); }
+        .footer-copy { font-size: 0.85rem; color: var(--text-muted); letter-spacing: 0.05em; }
+        .footer-om { font-size: 1.5rem; color: rgba(201,146,42,0.4); }
+
+        @media (max-width: 768px) {
+            nav { padding: 16px 20px; }
+            .nav-links { display: none; }
+            footer { flex-direction: column; text-align: center; }
+            .license-table thead { display: none; }
+            .license-table td { display: block; padding: 8px 16px; }
+            .license-table td:first-child { padding-top: 16px; }
+            .license-table td:last-child { padding-bottom: 16px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a class="nav-brand" href="index.html">॥ Panchangam ॥</a>
+        <ul class="nav-links">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li><span class="nav-divider"></span></li>
+            <li class="nav-legal"><a href="privacy-policy.html">Privacy</a></li>
+            <li class="nav-legal"><a href="terms-of-service.html">Terms</a></li>
+            <li class="nav-legal"><a href="licenses.html" class="active">Licenses</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-header">
+        <span class="page-eyebrow">Open Source</span>
+        <h1 class="page-title">Third-Party Licenses</h1>
+        <p class="page-meta">Hindu Calendar is built on the shoulders of great open-source work</p>
+        <div class="ornament">
+            <div class="ornament-line"></div>
+            <div class="ornament-dot"></div>
+            <div class="ornament-diamond"></div>
+            <div class="ornament-dot"></div>
+            <div class="ornament-line reverse"></div>
+        </div>
+    </div>
+
+    <div class="content-wrapper">
+
+        <p class="intro-text">We are grateful to the developers of the following open-source libraries that make Hindu Calendar possible.</p>
+
+        <!-- Core Frameworks -->
+        <div class="license-group">
+            <div class="license-group-title">Core Frameworks</div>
+            <table class="license-table">
+                <thead>
+                    <tr>
+                        <th>Library</th>
+                        <th>License</th>
+                        <th>Source</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="lib-name">React Native</span></td>
+                        <td><span class="badge badge-mit">MIT</span></td>
+                        <td><a class="license-link" href="https://github.com/facebook/react-native/blob/main/LICENSE" target="_blank" rel="noopener">View License ↗</a></td>
+                    </tr>
+                    <tr>
+                        <td><span class="lib-name">React</span></td>
+                        <td><span class="badge badge-mit">MIT</span></td>
+                        <td><a class="license-link" href="https://github.com/facebook/react/blob/main/LICENSE" target="_blank" rel="noopener">View License ↗</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Calculation & Logic -->
+        <div class="license-group">
+            <div class="license-group-title">Calculation &amp; Logic</div>
+            <table class="license-table">
+                <thead>
+                    <tr>
+                        <th>Library</th>
+                        <th>License</th>
+                        <th>Source</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="lib-name">@ishubhamx/panchangam-js</span></td>
+                        <td><span class="badge badge-mit">MIT</span></td>
+                        <td><a class="license-link" href="https://github.com/ishubhamx/panchangam-js/blob/main/LICENSE" target="_blank" rel="noopener">View License ↗</a></td>
+                    </tr>
+                    <tr>
+                        <td><span class="lib-name">i18next</span></td>
+                        <td><span class="badge badge-mit">MIT</span></td>
+                        <td><a class="license-link" href="https://github.com/i18next/i18next/blob/master/LICENSE" target="_blank" rel="noopener">View License ↗</a></td>
+                    </tr>
+                    <tr>
+                        <td><span class="lib-name">axios</span></td>
+                        <td><span class="badge badge-mit">MIT</span></td>
+                        <td><a class="license-link" href="https://github.com/axios/axios/blob/v1.x/LICENSE" target="_blank" rel="noopener">View License ↗</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Firebase & Cloud Services -->
+        <div class="license-group">
+            <div class="license-group-title">Firebase &amp; Cloud Services</div>
+            <table class="license-table">
+                <thead>
+                    <tr>
+                        <th>Library</th>
+                        <th>License</th>
+                        <th>Source</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="lib-name">React Native Firebase</span></td>
+                        <td><span class="badge badge-apache">Apache 2.0</span></td>
+                        <td><a class="license-link" href="https://github.com/invertase/react-native-firebase/blob/main/LICENSE" target="_blank" rel="noopener">View License ↗</a></td>
+                    </tr>
+                    <tr>
+                        <td><span class="lib-name">Firebase Admin SDK</span></td>
+                        <td><span class="badge badge-apache">Apache 2.0</span></td>
+                        <td><a class="license-link" href="https://github.com/firebase/firebase-admin-node/blob/master/LICENSE" target="_blank" rel="noopener">View License ↗</a></td>
+                    </tr>
+                    <tr>
+                        <td><span class="lib-name">Firebase Functions SDK</span></td>
+                        <td><span class="badge badge-mit">MIT</span></td>
+                        <td><a class="license-link" href="https://github.com/firebase/firebase-functions/blob/master/LICENSE" target="_blank" rel="noopener">View License ↗</a></td>
+                    </tr>
+                    <tr>
+                        <td><span class="lib-name">Google Generative AI SDK</span></td>
+                        <td><span class="badge badge-apache">Apache 2.0</span></td>
+                        <td><a class="license-link" href="https://github.com/google/generative-ai-js/blob/main/LICENSE" target="_blank" rel="noopener">View License ↗</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- UI & Navigation -->
+        <div class="license-group">
+            <div class="license-group-title">UI &amp; Navigation</div>
+            <table class="license-table">
+                <thead>
+                    <tr>
+                        <th>Library</th>
+                        <th>License</th>
+                        <th>Source</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="lib-name">React Navigation</span></td>
+                        <td><span class="badge badge-mit">MIT</span></td>
+                        <td><a class="license-link" href="https://github.com/react-navigation/react-navigation/blob/main/LICENSE" target="_blank" rel="noopener">View License ↗</a></td>
+                    </tr>
+                    <tr>
+                        <td><span class="lib-name">React Native SVG</span></td>
+                        <td><span class="badge badge-mit">MIT</span></td>
+                        <td><a class="license-link" href="https://github.com/software-mansion/react-native-svg/blob/main/LICENSE" target="_blank" rel="noopener">View License ↗</a></td>
+                    </tr>
+                    <tr>
+                        <td><span class="lib-name">React Native Vector Icons</span></td>
+                        <td><span class="badge badge-mit">MIT</span></td>
+                        <td><a class="license-link" href="https://github.com/oblador/react-native-vector-icons/blob/master/LICENSE" target="_blank" rel="noopener">View License ↗</a></td>
+                    </tr>
+                    <tr>
+                        <td><span class="lib-name">React Native Screens</span></td>
+                        <td><span class="badge badge-mit">MIT</span></td>
+                        <td><a class="license-link" href="https://github.com/software-mansion/react-native-screens/blob/master/LICENSE" target="_blank" rel="noopener">View License ↗</a></td>
+                    </tr>
+                    <tr>
+                        <td><span class="lib-name">React Native Safe Area Context</span></td>
+                        <td><span class="badge badge-mit">MIT</span></td>
+                        <td><a class="license-link" href="https://github.com/th3rdwave/react-native-safe-area-context/blob/main/LICENSE" target="_blank" rel="noopener">View License ↗</a></td>
+                    </tr>
+                    <tr>
+                        <td><span class="lib-name">React Native Pager View</span></td>
+                        <td><span class="badge badge-mit">MIT</span></td>
+                        <td><a class="license-link" href="https://github.com/callstack/react-native-pager-view/blob/master/LICENSE" target="_blank" rel="noopener">View License ↗</a></td>
+                    </tr>
+                    <tr>
+                        <td><span class="lib-name">React Native Linear Gradient</span></td>
+                        <td><span class="badge badge-mit">MIT</span></td>
+                        <td><a class="license-link" href="https://github.com/react-native-linear-gradient/react-native-linear-gradient/blob/master/LICENSE" target="_blank" rel="noopener">View License ↗</a></td>
+                    </tr>
+                    <tr>
+                        <td><span class="lib-name">React Native BootSplash</span></td>
+                        <td><span class="badge badge-mit">MIT</span></td>
+                        <td><a class="license-link" href="https://github.com/zoontek/react-native-bootsplash/blob/master/LICENSE" target="_blank" rel="noopener">View License ↗</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Utilities -->
+        <div class="license-group">
+            <div class="license-group-title">Utilities</div>
+            <table class="license-table">
+                <thead>
+                    <tr>
+                        <th>Library</th>
+                        <th>License</th>
+                        <th>Source</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="lib-name">Async Storage</span></td>
+                        <td><span class="badge badge-mit">MIT</span></td>
+                        <td><a class="license-link" href="https://github.com/react-native-async-storage/async-storage/blob/main/LICENSE" target="_blank" rel="noopener">View License ↗</a></td>
+                    </tr>
+                    <tr>
+                        <td><span class="lib-name">Cheerio</span></td>
+                        <td><span class="badge badge-mit">MIT</span></td>
+                        <td><a class="license-link" href="https://github.com/cheeriojs/cheerio/blob/master/LICENSE" target="_blank" rel="noopener">View License ↗</a></td>
+                    </tr>
+                    <tr>
+                        <td><span class="lib-name">Express</span></td>
+                        <td><span class="badge badge-mit">MIT</span></td>
+                        <td><a class="license-link" href="https://github.com/expressjs/express/blob/master/LICENSE" target="_blank" rel="noopener">View License ↗</a></td>
+                    </tr>
+                    <tr>
+                        <td><span class="lib-name">Dotenv</span></td>
+                        <td><span class="badge badge-bsd">BSD-2-Clause</span></td>
+                        <td><a class="license-link" href="https://github.com/motdotla/dotenv/blob/master/LICENSE" target="_blank" rel="noopener">View License ↗</a></td>
+                    </tr>
+                    <tr>
+                        <td><span class="lib-name">CORS</span></td>
+                        <td><span class="badge badge-mit">MIT</span></td>
+                        <td><a class="license-link" href="https://github.com/expressjs/cors/blob/master/LICENSE" target="_blank" rel="noopener">View License ↗</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p class="footnote">This list includes major direct dependencies. For a full list including transitive dependencies, please refer to the project's lock files.</p>
+
+    </div>
+
+    <footer>
+        <span class="footer-brand">Hindu Panchangam</span>
+        <div class="footer-legal">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <div class="footer-legal-divider"></div>
+            <a href="terms-of-service.html">Terms of Service</a>
+            <div class="footer-legal-divider"></div>
+            <a href="licenses.html" class="active">Licenses</a>
+        </div>
+        <span class="footer-copy">&copy; 2026 Hindu Panchangam. All rights reserved.</span>
+        <span class="footer-om">ॐ</span>
+    </footer>
+
+</body>
+</html>

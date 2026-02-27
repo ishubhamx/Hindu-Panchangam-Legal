@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service · Hindu Panchangam</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --saffron: #FF6B00;
+            --gold: #C9922A;
+            --gold-light: #F0C96B;
+            --dark: #1A0A00;
+            --dark-mid: #2D1600;
+            --text-light: #F5E6C8;
+            --text-muted: #A0855A;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: var(--dark);
+            color: var(--text-light);
+            font-family: 'EB Garamond', serif;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.4;
+        }
+
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            padding: 20px 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(26,10,0,0.97);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(201,146,42,0.15);
+        }
+
+        .nav-brand {
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            color: var(--gold);
+            text-decoration: none;
+            letter-spacing: 0.2em;
+        }
+
+        .nav-links { list-style: none; display: flex; gap: 32px; align-items: center; }
+        .nav-links a {
+            font-family: 'Cinzel', serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover, .nav-links a.active { color: var(--gold); }
+
+        .nav-divider { width: 1px; height: 16px; background: rgba(201,146,42,0.25); display: inline-block; vertical-align: middle; }
+        .nav-links .nav-legal a { color: rgba(160,133,90,0.5); font-size: 0.6rem; }
+        .nav-links .nav-legal a:hover, .nav-links .nav-legal a.active { color: var(--gold); }
+
+        .page-header {
+            padding: 160px 20px 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 700px; height: 400px;
+            background: radial-gradient(ellipse at center, rgba(201,146,42,0.10) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .page-eyebrow {
+            font-family: 'Cinzel', serif;
+            font-size: 0.65rem;
+            letter-spacing: 0.5em;
+            color: var(--saffron);
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 16px;
+        }
+
+        .page-title {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--gold-light), var(--gold), var(--saffron));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 16px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .page-meta {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .ornament {
+            display: flex; align-items: center; gap: 16px;
+            justify-content: center; margin: 30px auto;
+        }
+        .ornament-line { height: 1px; width: 80px; background: linear-gradient(to right, transparent, var(--gold)); }
+        .ornament-line.reverse { background: linear-gradient(to left, transparent, var(--gold)); }
+        .ornament-diamond { width: 7px; height: 7px; background: var(--gold); transform: rotate(45deg); }
+        .ornament-dot { width: 3px; height: 3px; background: var(--saffron); border-radius: 50%; }
+
+        .content-wrapper {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 20px 120px;
+        }
+
+        .legal-section {
+            margin-bottom: 56px;
+            border-left: 2px solid rgba(201,146,42,0.2);
+            padding-left: 32px;
+            position: relative;
+        }
+
+        .legal-section::before {
+            content: '';
+            position: absolute;
+            left: -5px; top: 0;
+            width: 8px; height: 8px;
+            background: var(--gold);
+            transform: rotate(45deg);
+        }
+
+        .legal-section h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.7rem;
+            font-weight: 600;
+            color: var(--gold-light);
+            margin-bottom: 18px;
+        }
+
+        .legal-section h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 0.8rem;
+            letter-spacing: 0.2em;
+            color: var(--saffron);
+            text-transform: uppercase;
+            margin: 20px 0 10px;
+        }
+
+        .legal-section p {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: var(--text-muted);
+            margin-bottom: 14px;
+        }
+
+        .legal-section ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 14px;
+        }
+
+        .legal-section ul li {
+            font-size: 1.05rem;
+            line-height: 1.85;
+            color: var(--text-muted);
+            padding: 6px 0 6px 20px;
+            position: relative;
+            border-bottom: 1px solid rgba(201,146,42,0.06);
+        }
+
+        .legal-section ul li::before {
+            content: '◆';
+            position: absolute;
+            left: 0;
+            color: rgba(201,146,42,0.4);
+            font-size: 0.5rem;
+            top: 12px;
+        }
+
+        .legal-section a {
+            color: var(--gold);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(201,146,42,0.3);
+            transition: color 0.3s, border-color 0.3s;
+        }
+        .legal-section a:hover { color: var(--gold-light); border-color: var(--gold-light); }
+
+        strong { color: var(--text-light); font-weight: 600; }
+        em { font-style: italic; color: rgba(160,133,90,0.8); }
+
+        .highlight-box {
+            background: rgba(45,22,0,0.5);
+            border: 1px solid rgba(201,146,42,0.2);
+            padding: 28px 32px;
+            margin: 24px 0;
+            position: relative;
+        }
+        .highlight-box::before, .highlight-box::after {
+            content: '';
+            position: absolute;
+            width: 20px; height: 20px;
+            border-color: var(--gold); border-style: solid;
+        }
+        .highlight-box::before { top: -1px; left: -1px; border-width: 1px 0 0 1px; }
+        .highlight-box::after  { bottom: -1px; right: -1px; border-width: 0 1px 1px 0; }
+
+        footer {
+            border-top: 1px solid rgba(201,146,42,0.15);
+            padding: 40px 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-brand { font-family: 'Cinzel', serif; font-size: 1rem; color: var(--gold); letter-spacing: 0.2em; }
+        .footer-legal { display: flex; gap: 24px; align-items: center; }
+        .footer-legal a {
+            font-family: 'Cinzel', serif;
+            font-size: 0.6rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: rgba(160,133,90,0.5);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .footer-legal a:hover, .footer-legal a.active { color: var(--gold); }
+        .footer-legal-divider { width: 1px; height: 12px; background: rgba(201,146,42,0.2); }
+        .footer-copy { font-size: 0.85rem; color: var(--text-muted); letter-spacing: 0.05em; }
+        .footer-om { font-size: 1.5rem; color: rgba(201,146,42,0.4); }
+
+        @media (max-width: 768px) {
+            nav { padding: 16px 20px; }
+            .nav-links { display: none; }
+            footer { flex-direction: column; text-align: center; }
+            .legal-section { padding-left: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a class="nav-brand" href="index.html">॥ Panchangam ॥</a>
+        <ul class="nav-links">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li><span class="nav-divider"></span></li>
+            <li class="nav-legal"><a href="privacy-policy.html">Privacy</a></li>
+            <li class="nav-legal"><a href="terms-of-service.html" class="active">Terms</a></li>
+            <li class="nav-legal"><a href="licenses.html">Licenses</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-header">
+        <span class="page-eyebrow">Legal</span>
+        <h1 class="page-title">Terms of Service</h1>
+        <p class="page-meta">Effective Date: February 27, 2026</p>
+        <div class="ornament">
+            <div class="ornament-line"></div>
+            <div class="ornament-dot"></div>
+            <div class="ornament-diamond"></div>
+            <div class="ornament-dot"></div>
+            <div class="ornament-line reverse"></div>
+        </div>
+    </div>
+
+    <div class="content-wrapper">
+
+        <div class="legal-section">
+            <p>Welcome to the Hindu Calendar app ("App"), developed and operated by <strong>ishubhamx</strong> ("Developer," "we," "us," or "our"). By downloading, accessing, or using the App, you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use the App.</p>
+        </div>
+
+        <div class="legal-section">
+            <h2>1. Description of Service</h2>
+            <p>Hindu Calendar is a mobile application that provides astrological and astronomical calculations (Panchang), holiday information, calendars, and other related services for personal, non-commercial use.</p>
+        </div>
+
+        <div class="legal-section">
+            <h2>2. Accuracy of Information</h2>
+            <div class="highlight-box">
+                <p style="margin:0; font-style:italic; color: var(--text-muted);">The App provides astrological and astronomical data "AS IS" with no warranties or representations regarding absolute accuracy, completeness, or reliability.</p>
+            </div>
+            <ul>
+                <li><strong>Calculations:</strong> The App uses the <code style="font-family:monospace; color:var(--gold-light); font-size:0.9em;">@ishubhamx/panchangam-js</code> astronomical engine to calculate planetary positions, tithis, nakshatras, and other metrics based on your provided or detected location.</li>
+                <li><strong>No Guarantee:</strong> While we strive for high accuracy, astronomical algorithms, time zones, and interpretations may vary. We make <strong>no warranties or representations</strong> regarding the absolute accuracy, completeness, or reliability of the data generated by the App.</li>
+                <li><strong>Reliance:</strong> You acknowledge that any reliance on the information provided by the App is at your own risk. The App is not intended for critical scheduling or life-altering decisions.</li>
+            </ul>
+        </div>
+
+        <div class="legal-section">
+            <h2>3. User Responsibilities</h2>
+            <p>When using this App, you agree <strong>not</strong> to:</p>
+            <ul>
+                <li>Use the App for any illegal or unauthorized purpose.</li>
+                <li>Attempt to reverse engineer, decompile, or hack the App's source code or its underlying APIs and services.</li>
+                <li>Interfere with or disrupt the operation of the App or the servers and networks used to make the App available.</li>
+            </ul>
+        </div>
+
+        <div class="legal-section">
+            <h2>4. Intellectual Property</h2>
+            <ul>
+                <li><strong>Ownership:</strong> The App, including its original design, source code, text, generated SVGs, graphics, and features, are owned by the Developer and are protected by international copyright, trademark, and other intellectual property laws.</li>
+                <li><strong>License:</strong> We grant you a limited, non-exclusive, non-transferable, and revocable license to use the App for personal, non-commercial purposes on your personal devices.</li>
+            </ul>
+        </div>
+
+        <div class="legal-section">
+            <h2>5. Third-Party Services</h2>
+            <p>The App integrates third-party services, primarily Google Firebase (Analytics and Crashlytics), to improve functionality and stability. These services are governed by their own Terms of Service. By using the App, you also acknowledge the use of these integrated third-party platforms.</p>
+        </div>
+
+        <div class="legal-section">
+            <h2>6. Limitation of Liability</h2>
+            <p>To the maximum extent permitted by applicable law, the Developer shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses, resulting from:</p>
+            <ul>
+                <li>Your use or inability to use the App.</li>
+                <li>Any errors or inaccuracies in the Panchang calculations, timings, or festival dates.</li>
+            </ul>
+        </div>
+
+        <div class="legal-section">
+            <h2>7. Changes to Terms</h2>
+            <p>We reserve the right to modify or replace these Terms at any time. We will post the most current version of the Terms within the App or on this web page. Your continued use of the App following any changes constitutes your acceptance of the new Terms.</p>
+        </div>
+
+        <div class="legal-section">
+            <h2>8. Contact Us</h2>
+            <p>If you have any questions about these Terms, please contact us:</p>
+            <div class="highlight-box">
+                <p style="margin:0 0 8px;"><strong>Developer:</strong> ishubhamx</p>
+                <p style="margin:0;"><strong>GitHub:</strong> <a href="https://github.com/ishubhamx" target="_blank" rel="noopener">github.com/ishubhamx</a></p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <span class="footer-brand">Hindu Panchangam</span>
+        <div class="footer-legal">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <div class="footer-legal-divider"></div>
+            <a href="terms-of-service.html" class="active">Terms of Service</a>
+            <div class="footer-legal-divider"></div>
+            <a href="licenses.html">Licenses</a>
+        </div>
+        <span class="footer-copy">&copy; 2026 Hindu Panchangam. All rights reserved.</span>
+        <span class="footer-om">ॐ</span>
+    </footer>
+
+</body>
+</html>
