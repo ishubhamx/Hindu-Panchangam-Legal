@@ -304,7 +304,7 @@
     <div class="page-header">
         <span class="page-eyebrow">Legal</span>
         <h1 class="page-title">Privacy Policy</h1>
-        <p class="page-meta">Effective Date: February 27, 2026</p>
+        <p class="page-meta">Effective Date: February 28, 2026</p>
         <div class="ornament">
             <div class="ornament-line"></div>
             <div class="ornament-dot"></div>
@@ -331,7 +331,8 @@
             <p>To calculate accurate Panchang timings such as Tithi, Nakshatra, Yoga, Karana, and Sunrise/Sunset times for your specific area, the App requires access to your device's location.</p>
             <ul>
                 <li><strong>How it is used:</strong> Your location data (latitude and longitude) is processed locally on your device using the <code style="font-family:monospace; color:var(--gold-light); font-size:0.9em;">@ishubhamx/panchangam-js</code> library.</li>
-                <li><strong>Storage:</strong> Your selected or detected location coordinates are stored locally on your device. We <strong>do not</strong> transmit your location data to our servers.</li>
+                <li><strong>Storage:</strong> Your selected or detected location coordinates are stored locally on your device.</li>
+                <li><strong>Limited transmission for online features:</strong> When you use optional online features (such as backend-generated insights content), date, language, and approximate location coordinates are sent to our backend (Firebase Functions) to generate and return those results.</li>
             </ul>
 
             <h3>C. Automatically Collected Information</h3>
@@ -343,6 +344,14 @@
             <div class="highlight-box">
                 <p style="margin:0;">Data collected by Google Firebase is subject to <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</p>
             </div>
+
+            <h3>D. Push Notifications and Device Tokens</h3>
+            <p>If you allow notifications, the App uses Firebase Cloud Messaging (FCM) for delivery.</p>
+            <ul>
+                <li><strong>FCM Token:</strong> Your device's FCM token and an app-generated device identifier are transmitted to our backend and stored in Firebase Firestore to enable push delivery.</li>
+                <li><strong>Usage:</strong> These identifiers are used only for sending app notifications and maintaining notification delivery.</li>
+                <li><strong>Permissions:</strong> Push notifications are optional and controlled by your device/app notification settings.</li>
+            </ul>
         </div>
 
         <div class="legal-section">
@@ -350,15 +359,17 @@
             <p>We use the minimal information collected or generated for the following purposes:</p>
             <ul>
                 <li>To provide and maintain the App's core functionality (accurate Panchang calculations based on your location).</li>
+                <li>To provide optional backend-generated content (such as dynamic insights).</li>
                 <li>To identify and fix technical issues and bugs (via Crashlytics).</li>
                 <li>To analyze user trends and improve the overall user experience (via Analytics).</li>
+                <li>To deliver push notifications to opted-in devices.</li>
             </ul>
         </div>
 
         <div class="legal-section">
             <h2>3. How We Share Your Information</h2>
             <p>We <strong>do not</strong> sell, trade, or rent your personal information to third parties.</p>
-            <p>We only share information with third-party service providers (like Google Firebase) strictly for the purposes of analytics and crash reporting as described in Section 1C. These providers are bound by their own privacy policies.</p>
+            <p>We only share information with third-party service providers (like Google Firebase) for the purposes described in this policy, including analytics, crash reporting, backend feature processing, and push notification delivery. These providers are bound by their own privacy policies.</p>
         </div>
 
         <div class="legal-section">
@@ -368,7 +379,7 @@
 
         <div class="legal-section">
             <h2>5. Security of Your Information</h2>
-            <p>We prioritize the security of your data. The core astrological calculations are performed entirely offline on your device. While no method of transmission over the internet or electronic storage is 100% secure, we strive to use commercially acceptable means to protect any data handled by our third-party analytics providers.</p>
+            <p>We prioritize the security of your data. The core astrological calculations are primarily performed on-device, and optional online features are processed through secured cloud infrastructure. While no method of transmission over the internet or electronic storage is 100% secure, we strive to use commercially acceptable means to protect data handled through our third-party providers.</p>
         </div>
 
         <div class="legal-section">

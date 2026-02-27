@@ -1,6 +1,6 @@
 # Terms of Service for Hindu Calendar
 
-**Effective Date: February 27, 2026**
+**Effective Date: February 28, 2026**
 
 Welcome to the Hindu Calendar app ("App"), developed and operated by ishubhamx ("Developer," "we," "us," or "our"). By downloading, accessing, or using the App, you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use the App.
 
@@ -23,7 +23,7 @@ When using this App, you agree not to:
 *   **License:** We grant you a limited, non-exclusive, non-transferable, and revocable license to use the App for personal, non-commercial purposes on your personal devices.
 
 ## 5. Third-Party Services
-The App integrates third-party services, primarily Google Firebase (Analytics and Crashlytics), to improve functionality and stability. These services are governed by their own Terms of Service. By using the App, you also acknowledge the use of these integrated third-party platforms.
+The App integrates third-party services, primarily Google Firebase (including Analytics, Crashlytics, Cloud Functions, Firestore, and Cloud Messaging), to improve functionality, stability, and notification delivery. These services are governed by their own Terms of Service. By using the App, you also acknowledge the use of these integrated third-party platforms.
 
 ## 6. Limitation of Liability
 To the maximum extent permitted by applicable law, the Developer shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses, resulting from:
