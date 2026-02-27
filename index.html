@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hindu Calendar - Legal & Support</title>
+  <style>
+    :root {
+      --primary: #F06543;
+      --bg: #FAFAFA;
+      --text: #333333;
+      --card-bg: #FFFFFF;
+      --border: #EAEAEF;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background-color: var(--bg);
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-container {
+      background: var(--card-bg);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    }
+
+    .nav-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-brand {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .nav-links a {
+      color: var(--text);
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--primary);
+    }
+
+    .main-container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: var(--card-bg);
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02), 0 1px 3px rgba(0, 0, 0, 0.04);
+    }
+
+    /* Markdown Styles */
+    #content h1,
+    #content h2,
+    #content h3 {
+      color: #111;
+      margin-top: 1.5em;
+    }
+
+    #content h1 {
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 0.3em;
+      margin-top: 0;
+    }
+
+    #content h2 {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.3em;
+    }
+
+    #content a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    #content a:hover {
+      text-decoration: underline;
+    }
+
+    #content code {
+      background: #f6f8fa;
+      padding: 0.2em 0.4em;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+
+    #content ul {
+      padding-left: 2em;
+    }
+
+    /* Home Page specific styles */
+    .home-hero {
+      text-align: center;
+      padding: 3rem 0;
+    }
+
+    .home-hero h1 {
+      border: none;
+      margin-bottom: 0.5em;
+    }
+
+    .home-hero p {
+      color: #666;
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      padding: 2rem;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
+      border-color: var(--primary);
+    }
+
+    .card h3 {
+      color: var(--primary);
+      margin: 0 0 0.5rem 0;
+      border: none;
+    }
+
+    .card p {
+      margin: 0;
+      color: #666;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 600px) {
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      /* Simplified mobile nav */
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="nav-container">
+    <div class="nav-content">
+      <a href="?" class="nav-brand">Hindu Calendar</a>
+      <div class="nav-links">
+        <a href="?page=privacy-policy" id="link-privacy-policy">Privacy Policy</a>
+        <a href="?page=terms-of-service" id="link-terms-of-service">Terms of Service</a>
+        <a href="?page=licenses" id="link-licenses">Licenses</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Document Container -->
+  <main class="main-container">
+    <div id="content">Loading content...</div>
+  </main>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const page = urlParams.get('page');
+
+    // Highlight active nav link
+    if (page) {
+      const activeLink = document.getElementById('link-' + page);
+      if (activeLink) activeLink.classList.add('active');
+    }
+
+    const contentDiv = document.getElementById('content');
+
+    // Serve Home Page if no valid page requested
+    if (!page) {
+      document.title = "Hindu Calendar - Info & Legal";
+      contentDiv.innerHTML = `
+        <div class="home-hero">
+          <h1>Hindu Calendar Hub</h1>
+          <p>Welcome to the support and legal hub for the Hindu Calendar application. Select a document below to read our policies and third-party credits.</p>
+          
+          <div class="card-grid">
+            <a href="?page=privacy-policy" class="card">
+              <h3>Privacy Policy</h3>
+              <p>Learn how we handle your data, location, and Firebase analytics.</p>
+            </a>
+            <a href="?page=terms-of-service" class="card">
+              <h3>Terms of Service</h3>
+              <p>Read the rules, guidelines, and disclaimers for using the app.</p>
+            </a>
+            <a href="?page=licenses" class="card">
+              <h3>Third-Party Licenses</h3>
+              <p>View credits and licenses for the open-source libraries we use.</p>
+            </a>
+            <a href="mailto:support@ishubhamx.com?subject=Hindu%20Calendar%20General%20Inquiry" class="card" style="grid-column: 1 / -1;">
+              <h3>Contact Support</h3>
+              <p>Need help? Send us an email.</p>
+            </a>
+          </div>
+        </div>
+      `;
+    } else {
+      // Allowed documents to fetch
+      const allowedPages = ['privacy-policy', 'terms-of-service', 'licenses'];
+
+      if (allowedPages.includes(page)) {
+        fetch(page + '.md')
+          .then(response => {
+            if (!response.ok) throw new Error('File not found');
+            return response.text();
+          })
+          .then(text => {
+            contentDiv.innerHTML = marked.parse(text);
+            const titleCase = page.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+            document.title = "Hindu Calendar - " + titleCase;
+          })
+          .catch(error => {
+            contentDiv.innerHTML = `
+                <div style="text-align: center; padding: 3rem 0;">
+                  <h1>Content Not Found</h1>
+                  <p>The document you are looking for could not be loaded.</p>
+                  <br>
+                  <a href="?" style="display: inline-block; padding: 0.8rem 1.5rem; background: var(--primary); color: white; border-radius: 6px; font-weight: 500;">Return Home</a>
+                </div>
+              `;
+            console.error('Error fetching markdown:', error);
+          });
+      } else {
+        contentDiv.innerHTML = `
+            <div style="text-align: center; padding: 3rem 0;">
+              <h1>Invalid Page</h1>
+              <p>The requested page is not permitted.</p>
+              <br>
+              <a href="?" style="display: inline-block; padding: 0.8rem 1.5rem; background: var(--primary); color: white; border-radius: 6px; font-weight: 500;">Return Home</a>
+            </div>
+          `;
+      }
+    }
+  </script>
+</body>
+
+</html>
