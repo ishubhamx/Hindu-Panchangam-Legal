@@ -304,7 +304,7 @@
     <div class="page-header">
         <span class="page-eyebrow">Legal</span>
         <h1 class="page-title">Privacy Policy</h1>
-        <p class="page-meta">Effective Date: February 28, 2026</p>
+        <p class="page-meta">Effective Date: March 17, 2026</p>
         <div class="ornament">
             <div class="ornament-line"></div>
             <div class="ornament-dot"></div>
@@ -345,12 +345,20 @@
                 <p style="margin:0;">Data collected by Google Firebase is subject to <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</p>
             </div>
 
-            <h3>D. Push Notifications and Device Tokens</h3>
-            <p>If you allow notifications, the App uses Firebase Cloud Messaging (FCM) for delivery.</p>
+            <h3>D. Notifications (Push &amp; Local Scheduled)</h3>
+            <p>The App uses two types of notifications:</p>
+            <p><strong>Push Notifications (Firebase Cloud Messaging):</strong></p>
             <ul>
                 <li><strong>FCM Token:</strong> Your device's FCM token and an app-generated device identifier are transmitted to our backend and stored in Firebase Firestore to enable push delivery.</li>
                 <li><strong>Usage:</strong> These identifiers are used only for sending app notifications and maintaining notification delivery.</li>
                 <li><strong>Permissions:</strong> Push notifications are optional and controlled by your device/app notification settings.</li>
+            </ul>
+            <p><strong>Local Scheduled Notifications (On-Device):</strong></p>
+            <ul>
+                <li>The App schedules time-based reminders locally on your device for events such as Hindu festivals, special tithis, and inauspicious periods (Rahu Kaal, Yamaganda, Gulika Kalam). This is performed entirely on-device — no data is sent to our servers for this purpose.</li>
+                <li><strong><code>SCHEDULE_EXACT_ALARM</code> / <code>USE_EXACT_ALARM</code> (Android):</strong> On Android 12 and above, the App requests the special &quot;Alarms &amp; Reminders&quot; permission to fire notifications at exact times. This permission is used solely to trigger on-device reminders and does not provide us access to any personal data.</li>
+                <li><strong><code>RECEIVE_BOOT_COMPLETED</code> (Android):</strong> The App listens for the device boot event solely to reschedule local notifications that were cleared when the device restarted. No personal data is collected or transmitted as part of this process.</li>
+                <li>All local notification preferences are stored locally on your device only.</li>
             </ul>
         </div>
 
@@ -363,6 +371,7 @@
                 <li>To identify and fix technical issues and bugs (via Crashlytics).</li>
                 <li>To analyze user trends and improve the overall user experience (via Analytics).</li>
                 <li>To deliver push notifications to opted-in devices.</li>
+                <li>To schedule and fire local on-device reminders for festivals, tithis, and inauspicious periods based on your notification preferences.</li>
             </ul>
         </div>
 

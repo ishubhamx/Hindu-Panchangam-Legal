@@ -1,6 +1,6 @@
 # Privacy Policy for Hindu Calendar
 
-**Effective Date: February 28, 2026**
+**Effective Date: March 17, 2026**
 
 Thank you for choosing to use the Hindu Calendar app ("App"), developed by ishubhamx ("Developer," "we," "us," or "our"). We are committed to protecting your personal information and your right to privacy.
 
@@ -22,11 +22,19 @@ To improve the performance and user experience of our App, we use third-party se
 *   **Firebase Analytics:** We may collect anonymous usage data, such as screens visited, features interacted with, device type, operating system version, and approximate geographic region (not precise location). This helps us understand how the app is used.
 *   **Firebase Crashlytics:** If the App crashes, we automatically collect crash reports. These reports contain diagnostic information about the crash, including device state at the time of the error, which helps us identify and fix bugs.
 
-### D. Push Notifications and Device Tokens
-If you allow notifications, the App uses Firebase Cloud Messaging (FCM) for delivery.
+### D. Notifications (Push & Local Scheduled)
+The App uses two types of notifications:
+
+**Push Notifications (Firebase Cloud Messaging):**
 *   **FCM Token:** Your device's FCM token and an app-generated device identifier are transmitted to our backend and stored in Firebase Firestore to enable push delivery.
 *   **Usage:** These identifiers are used only for sending app notifications and maintaining notification delivery.
 *   **Permissions:** Push notifications are optional and controlled by your device/app notification settings.
+
+**Local Scheduled Notifications (On-Device):**
+*   The App schedules time-based reminders locally on your device for events such as Hindu festivals, special tithis, and inauspicious periods (Rahu Kaal, Yamaganda, Gulika Kalam). This scheduling is performed entirely on-device using Android's AlarmManager or the equivalent iOS API — no data is sent to our servers for this purpose.
+*   **`SCHEDULE_EXACT_ALARM` / `USE_EXACT_ALARM` (Android):** On Android 12 and above, the App requests the special "Alarms & Reminders" permission to fire these notifications at exact times (e.g., precisely when Rahu Kaal begins). This permission is used solely to trigger on-device reminders and does not provide us access to any personal data.
+*   **`RECEIVE_BOOT_COMPLETED` (Android):** The App listens for the device boot event solely to reschedule any local notifications that were cleared when the device restarted. No personal data is collected or transmitted as part of this process.
+*   All local notification preferences (which types of alerts you enable) are stored locally on your device only.
 
 *Please note: Data collected by Google Firebase is subject to [Google's Privacy Policy](https://policies.google.com/privacy).*
 
@@ -38,6 +46,7 @@ We use the minimal information collected or generated for the following purposes
 *   To identify and fix technical issues and bugs (via Crashlytics).
 *   To analyze user trends and improve the overall user experience (via Analytics).
 *   To deliver push notifications to opted-in devices.
+*   To schedule and fire local on-device reminders for festivals, tithis, and inauspicious periods based on your notification preferences.
 
 ## 3. How We Share Your Information
 
